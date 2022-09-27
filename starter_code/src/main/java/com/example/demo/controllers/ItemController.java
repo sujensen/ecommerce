@@ -18,7 +18,9 @@ public class ItemController {
 
 	@Autowired
 	private ItemRepository itemRepository;
-	
+
+	// No authentication is required to request the item endpoints
+
 	@GetMapping
 	public ResponseEntity<List<Item>> getItems() {
 		return ResponseEntity.ok(itemRepository.findAll());

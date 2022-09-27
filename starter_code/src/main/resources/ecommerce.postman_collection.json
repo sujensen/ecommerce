@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "df644866-9270-454a-88f3-d91b094165b5",
+		"name": "ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14332618"
+	},
+	"item": [
+		{
+			"name": "CreateUserSusan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Susan\",\n    \"password\": \"abcdefg\",\n    \"confirmPassword\": \"abcdefg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUserSteve",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Steve\",\n    \"password\": \"1234567\",\n    \"confirmPassword\": \"1234567\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginSusan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Susan\",\n    \"password\": \"abcdefg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginSteve",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Steve\",\n    \"password\": \"1234567\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserSusan",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXNhbiIsImV4cCI6MTY2NDY2NTQ4N30.70o-gZITqWbEf-CYZ5hQENHmQ6SZEVl1mQHVVAkHJuddm6ZGGAh9_vA6_97Sr1Grf2PzLhLWruTd86VaQ7lK0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/user/Susan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"user",
+						"Susan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserSteve",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXNhbjIiLCJleHAiOjE2NjQ2NTg3Nzl9.D87NtUPlg3eHmYhczh-Oqs4CT-APjZwZ8aFN8pcKQ8xi9lLJNElObenz4yf_fWPkNRSTDMeS_efxz6MKYVT7Jw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/user/Steve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"user",
+						"Steve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserId1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXNhbiIsImV4cCI6MTY2NDY2NTQ4N30.70o-gZITqWbEf-CYZ5hQENHmQ6SZEVl1mQHVVAkHJuddm6ZGGAh9_vA6_97Sr1Grf2PzLhLWruTd86VaQ7lK0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/user/id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"user",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddToCartSusan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXNhbiIsImV4cCI6MTY2NDY2NTQ4N30.70o-gZITqWbEf-CYZ5hQENHmQ6SZEVl1mQHVVAkHJuddm6ZGGAh9_vA6_97Sr1Grf2PzLhLWruTd86VaQ7lK0A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Susan\",\n    \"itemId\": 1,\n    \"quantity\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/cart/addToCart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"cart",
+						"addToCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddToCartSusanMore",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXNhbiIsImV4cCI6MTY2NDY2NTQ4N30.70o-gZITqWbEf-CYZ5hQENHmQ6SZEVl1mQHVVAkHJuddm6ZGGAh9_vA6_97Sr1Grf2PzLhLWruTd86VaQ7lK0A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Susan\",\n    \"itemId\": 2,\n    \"quantity\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/cart/addToCart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"cart",
+						"addToCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveFromCartSusan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXNhbiIsImV4cCI6MTY2NDY2NTQ4N30.70o-gZITqWbEf-CYZ5hQENHmQ6SZEVl1mQHVVAkHJuddm6ZGGAh9_vA6_97Sr1Grf2PzLhLWruTd86VaQ7lK0A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Susan\",\n    \"itemId\": 2,\n    \"quantity\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/cart/removeFromCart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"cart",
+						"removeFromCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmitAnOrderSusan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXNhbiIsImV4cCI6MTY2NDY2NTQ4N30.70o-gZITqWbEf-CYZ5hQENHmQ6SZEVl1mQHVVAkHJuddm6ZGGAh9_vA6_97Sr1Grf2PzLhLWruTd86VaQ7lK0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/order/submit/Susan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"order",
+						"submit",
+						"Susan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderHistorySusan",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTdXNhbiIsImV4cCI6MTY2NDY2NTQ4N30.70o-gZITqWbEf-CYZ5hQENHmQ6SZEVl1mQHVVAkHJuddm6ZGGAh9_vA6_97Sr1Grf2PzLhLWruTd86VaQ7lK0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/order/history/Susan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"order",
+						"history",
+						"Susan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetItems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetItem1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/item/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"item",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetItemRoundWidget",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/item/name/Round%20Widget",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"item",
+						"name",
+						"Round%20Widget"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

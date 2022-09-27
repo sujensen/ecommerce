@@ -88,10 +88,26 @@ public class Cart {
 		if(items == null) {
 			items = new ArrayList<>();
 		}
-		items.remove(item);
-		if(total == null) {
+		if (total == null) {
 			total = new BigDecimal(0);
 		}
-		total = total.subtract(item.getPrice());
+		// just keep the items that don't match the remove item
+		boolean removedItem = false;
+		List<Item> smallerItems = new ArrayList<Item>();
+		for (Item i : items) {
+			if (i.getId() == item.getId()) {
+				if (!removedItem) {
+					removedItem = true;
+					total = total.subtract(item.getPrice());
+					continue;
+				} else {
+					smallerItems.add(i);
+				}
+			} else {
+				smallerItems.add(i);
+			}
+		}
+		// reassign items to the new list.
+		items = smallerItems;
 	}
 }
